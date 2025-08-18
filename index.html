@@ -66,97 +66,95 @@
 </head>
 <body class="font-sans">
     <!-- Unified background for header + hero -->
-<div class="bg-[url('bck.png')] pt-16 bg-contain bg-center bg-no-repeat">
-    <!-- Header -->
-    <!-- Header -->
-    <header id="header" class="fixed w-full top-0 z-50 transition-shadow duration-300">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-          <!-- Logo -->
-          <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 bg-globyte-green rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
-              </svg>
-            </div>
-            <div>
-              <h1 class="text-xl font-bold text-globyte-dark">GLOBYTE</h1>
-              <p class="text-xs text-globyte-blue">IT AND BUSINESS CONSULTING</p>
-            </div>
-          </div>
+<div class="relative overflow-hidden">
+  <!-- Background Image -->
+  <img src="bck.png" alt="Background"
+       class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
+
+  <!-- Header -->
+  <header id="header" class="fixed w-full top-0 z-50 transition-shadow duration-300 bg-white/80 backdrop-blur-md">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       
-          <!-- Navigation -->
-          <nav id="nav-menu" class="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a href="#home" class="text-globyte-dark hover:text-globyte-green transition-colors">Home</a>
-            <a href="#about" class="text-globyte-dark hover:text-globyte-green transition-colors">About</a>
-            <a href="#service" class="text-globyte-dark hover:text-globyte-green transition-colors">Service</a>
-            <a href="#pricing" class="text-globyte-dark hover:text-globyte-green transition-colors">Pricing</a>
-            <a href="#team" class="text-globyte-dark hover:text-globyte-green transition-colors">Team</a>
-            <a href="#blog" class="text-globyte-dark hover:text-globyte-green transition-colors">Blog</a>
-            <a href="#contact" class="text-globyte-dark hover:text-globyte-green transition-colors">Contact</a>
-            <button class="bg-globyte-gray text-white px-6 py-2 rounded-lg hover:bg-globyte-green transition-colors">
-              Get Started
-            </button>
-          </nav>
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img class="h-12 w-auto" 
+             src="https://s3.eu-north-1.amazonaws.com/www.globytesolution.com/Images/globytelogolarge-05.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAWMFUPIXL7TQW277R%2F20250818%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20250818T114141Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFsaCmV1LW5vcnRoLTEiRzBFAiBVjAyAYKfn8x22I8JujIi31N%2FnhRm2MVrfh4kKQDBNSQIhAKHtqj79SkvjKecrD6JRoOWAGncr5yXs8DynAfMzDeYeKvgCCKX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNDM4NDY1MTUyNDcxIgz%2BPF%2BPLHaVEKk%2B6AwqzAKjRX6cxFuJmy0pCXwmZ5L4JcHhSl6MTbqDlGmrOwS7TdFKGjnbRlepm%2FRjKrb8FRb7hpeT0QsYCJeVkZJmAYFPt3o%2F2yrRumnlo253ntsNDeWZwCkncWeW%2BFzjAWjYiCNUhazuaCdlwpYX3G6q0Q068mOQxOu4L%2FCojqgFnqajQ3cAu2maObXhP1JNWPFtseI8v92ZNZ1Yu%2F4sci8Au761ntx%2B%2BY70vccwTxUCFKsk5G4uEC%2BdYwBC6Ku6y2c7r6dhZoo%2BtbdH7YT0jaNvnKNCJ1i%2F87bRilU1Yy7jL8ihpo4SfhmPDDs7we5Oyp%2BrlxeVSOrLzta3rmMEauK9MbCCX9mLQSNjWwINgd3cUyGromhZeQmsiAqQWXRB23sJhwfXTW61etFHOsRh4g7iZV%2BEp0daUzu9hxoEq0OrzBAJkReCj3nmrLvjF3o%2BIDDGoIzFBjqtAgL5sEB%2F1ZI88VrX%2FXoAM%2BCKPlHjz6ORiC4jyjaTcY9IkUYco8f5Q5k%2FKWvO52GiIWsarBHqP6ZxHhzEuHXjw0udYPHW0kZFXp9ehu2ywWflm0TTHgTZ6KbMG9%2FKE8%2FwnYk27evFWMRWoCveugV%2FHLiOK8ZGRXOKuPNvPU7mbD3ZSn0rrStGOZttV6m8dwTgxPPsnP69Bj6DItPIvkMqUDprgle0gKZ1qJXEBDxV%2BFZKkBFPBmaUz62qio8cdwAxaljcFPdKNTSxeaOQShb3D4BIciBJkGKJdQucTE6iC0NU0iZHwBbq29sbxSOHQ7YaZndR6j%2F2e5YEqJjHsLj%2BGD3JJjOB1js9GWHxpoEmfeV2RAS2tsjh7b5alDgjzYbAET%2B6xFK8zcdbzi0DRx0%3D&X-Amz-Signature=a21e6015fe64656bc53c66587d5de0becb4d106475d47cfcbb91b53df4a14264&X-Amz-SignedHeaders=host&response-content-disposition=inline" 
+             alt="Globyte Logo" />
+      </div>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" class="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <a href="#home" class="text-globyte-dark hover:text-globyte-green transition-colors">Home</a>
+        <a href="#about" class="text-globyte-dark hover:text-globyte-green transition-colors">About</a>
+        <a href="#service" class="text-globyte-dark hover:text-globyte-green transition-colors">Service</a>
+        <a href="#pricing" class="text-globyte-dark hover:text-globyte-green transition-colors">Pricing</a>
+        <a href="#team" class="text-globyte-dark hover:text-globyte-green transition-colors">Team</a>
+        <a href="#blog" class="text-globyte-dark hover:text-globyte-green transition-colors">Blog</a>
+        <a href="#contact" class="text-globyte-dark hover:text-globyte-green transition-colors">Contact</a>
+        <button class="bg-globyte-gray text-white px-6 py-2 rounded-lg hover:bg-globyte-green transition-colors">
+          Get Started
+        </button>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-globyte-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white w-full shadow-md">
+      <div class="flex flex-col px-4 py-4 space-y-2">
+        <a href="#home" class="text-globyte-dark hover:text-globyte-green transition-colors">Home</a>
+        <a href="#about" class="text-globyte-dark hover:text-globyte-green transition-colors">About</a>
+        <a href="#service" class="text-globyte-dark hover:text-globyte-green transition-colors">Service</a>
+        <a href="#pricing" class="text-globyte-dark hover:text-globyte-green transition-colors">Pricing</a>
+        <a href="#team" class="text-globyte-dark hover:text-globyte-green transition-colors">Team</a>
+        <a href="#blog" class="text-globyte-dark hover:text-globyte-green transition-colors">Blog</a>
+        <a href="#contact" class="text-globyte-dark hover:text-globyte-green transition-colors">Contact</a>
+        <button class="bg-globyte-gray text-white px-6 py-2 rounded-lg hover:bg-globyte-green transition-colors mt-2">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center p-28 mt-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
-          <!-- Mobile Menu Button -->
-          <button id="menu-toggle" class="md:hidden text-globyte-dark focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
+      <!-- Left Content -->
+      <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <span class="text-globyte-dark">Driving Innovation.</span><br>
+          <span class="text-globyte-gray whitespace-nowrap">Powering Businesses.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-globyte-dark max-w-xl mx-auto lg:mx-0">
+          Globyte LLC is a dedicated IT and business consulting firm committed to optimizing IT infrastructure, enhancing cybersecurity, streamlining operations, and driving sustainable growth with a comprehensive suite of services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
+            Explore Services
+          </button>
+          <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
+            Schedule a Consultation
           </button>
         </div>
-      
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white w-full shadow-md">
-          <div class="flex flex-col px-4 py-4 space-y-2">
-            <a href="#home" class="text-globyte-dark hover:text-globyte-green transition-colors">Home</a>
-            <a href="#about" class="text-globyte-dark hover:text-globyte-green transition-colors">About</a>
-            <a href="#service" class="text-globyte-dark hover:text-globyte-green transition-colors">Service</a>
-            <a href="#pricing" class="text-globyte-dark hover:text-globyte-green transition-colors">Pricing</a>
-            <a href="#team" class="text-globyte-dark hover:text-globyte-green transition-colors">Team</a>
-            <a href="#blog" class="text-globyte-dark hover:text-globyte-green transition-colors">Blog</a>
-            <a href="#contact" class="text-globyte-dark hover:text-globyte-green transition-colors">Contact</a>
-            <button class="bg-globyte-gray text-white px-6 py-2 rounded-lg hover:bg-globyte-green transition-colors mt-2">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
-      
-      <!-- Hero Section -->
-      <section id="home" class="p-16 md:bg-[url('background.png')] bg-cover bg-center bg-no-repeat">
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Left Content -->
-            <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                <span class="text-globyte-dark">Driving Innovation.</span><br>
-                <span class="text-globyte-gray">Powering Businesses.</span>
-              </h2>
-              <p class="text-base sm:text-lg text-globyte-dark max-w-xl mx-auto lg:mx-0">
-                Globyte LLC is a dedicated IT and business consulting firm committed to optimizing IT infrastructure, enhancing cybersecurity, streamlining operations, and driving sustainable growth with a comprehensive suite of services.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
-                  Explore Services
-                </button>
-                <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
-                  Schedule a Consultation
-                </button>
-              </div>
-            </div>
-      
-            <!-- Right Content (Optional Image / Illustration) -->
-            <!-- <div class="hidden lg:flex justify-center">
-              <img src="hero-image.png" alt="Hero Illustration" class="w-full max-w-md rounded-lg shadow-lg">
-            </div> -->
-          </div>
-        </div>
-      </section>
+      </div>
 
+      <!-- Right Image -->
+      <div class="flex justify-center lg:justify-end">
+        <img src="background.png" alt="Hero Illustration" 
+             class="pl-24 sm:hidden lg:block absolute inset-0 w-full h-full pointer-events-none object-center object-cover" />
+      </div>
+
+    </div>
+  </section>
 </div>
+
 
 
     <!-- Our Services Section -->
