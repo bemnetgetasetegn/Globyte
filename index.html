@@ -23,6 +23,16 @@
         }
     </script>
     <style>
+       @font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+            body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
         .hero-bg {
             background: #fafbfc;
             position: relative;
@@ -64,7 +74,7 @@
         }
     </style>
 </head>
-<body class="font-sans">
+<body class="font-['Inter']">
     <!-- Unified background for header + hero -->
 <div class="relative overflow-hidden">
   <!-- Background Image -->
@@ -72,7 +82,7 @@
        class="absolute inset-0 w-full h-full object-cover object-center -z-10" />
 
   <!-- Header -->
-  <header id="header" class="fixed w-full top-0 z-50 transition-shadow duration-300 bg-white/80 backdrop-blur-md">
+  <header id="header" class="fixed lg:px-24 w-full top-0 z-50 transition-shadow duration-300 bg-white/80 backdrop-blur-md">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       
       <!-- Logo -->
@@ -123,44 +133,45 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center p-28 mt-12">
-    <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      
-      <!-- Left Content -->
-      <div class="space-y-6 lg:space-y-8 text-center lg:text-left">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-          <span class="text-globyte-dark">Driving Innovation.</span><br>
-          <span class="text-globyte-gray whitespace-nowrap">Powering Businesses.</span>
-        </h2>
-        <p class="text-base sm:text-lg text-globyte-dark max-w-xl mx-auto lg:mx-0">
-          Globyte LLC is a dedicated IT and business consulting firm committed to optimizing IT infrastructure, enhancing cybersecurity, streamlining operations, and driving sustainable growth with a comprehensive suite of services.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
-            Explore Services
-          </button>
-          <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
-            Schedule a Consultation
-          </button>
-        </div>
+  <!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center  p-6 lg:p-28 pt-32 lg:pt-36 xl:bg-[url('background.png')] bg-cover bg-center bg-no-repeat">
+  <div class="container mx-auto grid grid-cols-1 lg:mt-24 lg:grid-cols-2 gap-12 items-center">
+    <!-- Left Content -->
+    <div class="space-y-6 text-center lg:text-left">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+        <span class="text-globyte-dark">Driving Innovation.</span><br>
+        <span class="text-globyte-gray whitespace-nowrap">Powering Businesses.</span>
+      </h2>
+      <p class="text-base sm:text-lg text-globyte-dark max-w-xl mx-auto lg:mx-0">
+        Globyte LLC is a dedicated IT and business consulting firm committed to optimizing IT infrastructure, enhancing cybersecurity, streamlining operations, and driving sustainable growth with a comprehensive suite of services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
+          Explore Services
+        </button>
+        <button class="bg-globyte-gray text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-globyte-green transition-colors">
+          Schedule a Consultation
+        </button>
       </div>
-
-      <!-- Right Image -->
-      <div class="flex justify-center lg:justify-end">
-        <img src="background.png" alt="Hero Illustration" 
-             class="pl-24 sm:hidden lg:block absolute inset-0 w-full h-full pointer-events-none object-center object-cover" />
-      </div>
-
     </div>
-  </section>
+
+    <!-- Right Image -->
+    <!-- <div class="hidden lg:block justify-center  relative w-full">
+      <img src="background.png" alt="Hero Illustration" 
+           class="inset-0 h-full object-contain pointer-events-none" />
+    </div> -->
+  </div>
+</section>
+
 </div>
+
 
 
 
     <!-- Our Services Section -->
     <section id="service" class="relative py-16 bg-white overflow-hidden">
         <img src="os-bck.png" alt="Background" 
-             class="absolute inset-0 w-full h-full pointer-events-none" />
+             class="absolute hidden lg:block inset-0 w-full h-full pointer-events-none" />
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <!-- Section Header -->
           <div class="text-center mb-16">
@@ -340,7 +351,7 @@
     <section class="relative bg-white  overflow-hidden py-16">
         <!-- Background Pattern -->
         <img src="wcu-bck.png" alt="Background Pattern"
-             class="absolute inset-0 w-full h-full pointer-events-none" />
+             class="absolute hidden lg:block inset-0 w-full h-full pointer-events-none" />
       
         <div class="relative container mx-auto px-4">
           <!-- Heading -->
@@ -352,7 +363,7 @@
           </div>
       
           <!-- Steps and Details -->
-          <div class="space-y-8">
+          <div class="space-y-6">
             
             <!-- Step 1 -->
             <div class="flex flex-col md:flex-row gap-6 items-start">
@@ -457,7 +468,7 @@
         <section id="about" class="relative py-16 bg-white overflow-hidden">
             <!-- Background Pattern -->
             <img src="wea.png" alt="Pattern"
-                 class="absolute inset-0 w-auto h-auto  pointer-events-none" />
+                 class="absolute hidden lg:block inset-0 w-auto h-auto  pointer-events-none" />
           
             <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
               <!-- Section Header -->
@@ -594,7 +605,7 @@
 <section id="contact" class="relative py-16 bg-white overflow-hidden">
     <!-- Background Pattern -->
     <img src="contact.png" alt="Pattern"
-         class="absolute inset-0  pointer-events-none" />
+         class="hidden lg:block absolute inset-0 pointer-events-none" />
   
     <!-- Contact Content -->
     <div class="relative container mx-auto px-4">
