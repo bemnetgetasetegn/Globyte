@@ -2,6 +2,8 @@
 // Chatbot - Globyte Assistant
 // =============================
 
+require('dotenv').config();
+
 // DOM Elements
 const chatbotFab = document.getElementById('chatbotFab');
 const chatbotContainer = document.getElementById('chatbotContainer');
