@@ -2,7 +2,6 @@
 // Chatbot - Globyte Assistant
 // =============================
 
-require('dotenv').config();
 
 // DOM Elements
 const chatbotFab = document.getElementById('chatbotFab');
@@ -84,8 +83,8 @@ const knowledgeBase = {
     "AI & ML Integration": "We develop tailored AI solutions such as chatbots, workflow automation, and predictive analytics to enhance decision-making.",
     "Team": "Our team includes cloud-certified architects, UI/UX designers, developers, project managers, and business consultants working together to ensure top-quality solutions.",
     "Process": "Our process includes 1) Discovery & Assessment, 2) Gap Analysis, 3) Solution Design, 4) Implementation & Integration, 5) Monitoring & Continuous Improvement.",
-    "Contact": "You can reach us at info@globyte.com or +1 (123) 456-7890.",
-    "Location": "123 Technology Drive, Suite 456, San Francisco, CA 94107"
+    "Contact": "You can reach us at globyteconsulting@gmail.com or call +17202803704.",
+    "Location": "Please contact us at globyteconsulting@gmail.com or call +17202803704."
 };
 
 // Search FAQ
@@ -114,7 +113,7 @@ async function sendMessage() {
         const lowerPrompt = prompt.toLowerCase();
 
         // Simple responses
-        if (["hi", "hello", "hey"].some(g => lowerPrompt.includes(g))) {
+        if (["hi", "hello", "hey", "hy"].some(g => lowerPrompt.includes(g))) {
             hideLoadingIndicator();
             appendMessage("Hello 👋! How can I assist you today?", 'bot');
             return;
