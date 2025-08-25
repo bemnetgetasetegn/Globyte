@@ -170,163 +170,16 @@
       </div>
   
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8"></div>
+
+        <div id="serviceModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-black">&times;</button>
+    <h3 id="modalTitle" class="text-xl font-bold mb-4"></h3>
+    <p id="modalDescription" class="text-gray-700"></p>
+  </div>
+</div>
         
-        <!-- Service 1 -->
-        <div class="service-square relative w-full aspect-square bg-[#363B4D] rounded-lg p-5 sm:p-6">
-          <div class="text-white">
-            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">IT Strategy & Planning</h3>
-            <p class="text-justify leading-relaxed text-xs sm:text-sm text-gray-300">
-              Collaborate with clients to design a strategic technology roadmap that aligns with business goals, enabling digital transformation, operational efficiency, and sustainable long-term growth. Deliverables: Strategic IT plan, budget analysis, and timeline.
-            </p>
-          </div>
-          <div class="absolute -bottom-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-            <span class="text-[#363B4D] font-bold text-sm sm:text-lg">01</span>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-square relative w-full aspect-square bg-[#DDE5E5] rounded-lg p-5 sm:p-6">
-          <div class="text-[#363B4D]">
-            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">Systems Integration</h3>
-            <p class="text-justify leading-relaxed text-xs sm:text-sm text-[#363B4D]/80">
-              Facilitate the seamless integration of software, hardware, and network systems to streamline workflows, reduce operational bottlenecks, and enhance overall organizational efficiency. Deliverables: Integrated systems, testing reports, and comprehensive documentation.
-            </p>
-          </div>
-          <div class="absolute -bottom-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-sm sm:text-lg">02</span>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-square relative w-full aspect-square bg-[#363B4D] rounded-lg p-5 sm:p-6">
-          <div class="text-white">
-            <h3 class="text-lg font-bold mb-3">Cybersecurity Services</h3>
-            <p class="text-justify leading-relaxed text-sm text-gray-300">
-              Conduct comprehensive risk assessments and implement robust security measures to safeguard client data and systems. This includes deploying firewalls, encryption protocols, and incident response plans to ensure resilience against cyber threats.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-            <span class="text-[#363B4D] font-bold text-lg">03</span>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-square relative w-full aspect-square bg-[#DDE5E5] rounded-lg p-5 sm:p-6">
-          <div class="text-[#363B4D]">
-            <h3 class="text-lg font-bold mb-3">Cloud Computing Solutions</h3>
-            <p class="text-justify leading-relaxed text-sm text-[#363B4D]/80">
-              Enable efficient cloud migration and manage infrastructure across major platforms like AWS, Azure, and Google Cloud to optimize cost, scalability, and system performance. Deliverables: Migration plan, cloud setup, and optimization reports.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-lg">04</span>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="service-square relative w-full aspect-square bg-[#DDE5E5] rounded-lg p-5 sm:p-6">
-          <div class="text-[#363B4D]">
-            <h3 class="text-lg font-bold mb-3">Managed IT Services</h3>
-            <p class="text-justify leading-relaxed text-sm text-[#363B4D]/80">
-                Provide proactive network monitoring, end-to-end system maintenance, and around-the-clock helpdesk support to ensure continuous and reliable business operations. Deliverables: Monitoring dashboards, maintenance logs, and support tickets.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-lg">05</span>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="service-square relative w-full aspect-square bg-[#363B4D] rounded-lg p-5 sm:p-6">
-          <div class="text-white">
-            <h3 class="text-lg font-bold mb-3">Software Development & Customization</h3>
-            <p class="text-justify leading-relaxed text-sm text-gray-300">
-                Design and develop customized applications tailored to meet each client’s unique business challenges, goals, and operational requirements. Deliverables: Custom software, user manuals, and deployment support.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-            <span class="text-[#363B4D] font-bold text-lg">06</span>
-          </div>
-        </div>
-
-        <!-- Service 7 -->
-        <div class="service-square relative w-full aspect-square bg-[#DDE5E5] rounded-lg p-5 sm:p-6">
-          <div class="text-[#363B4D]">
-            <h3 class="text-lg font-bold mb-3">IT Support & Troubleshooting</h3>
-            <p class="text-justify leading-relaxed text-sm text-[#363B4D]/80">
-                Deliver fast and reliable technical support for hardware, software, and network issues to reduce downtime and keep business operations running smoothly. Deliverables: Support tickets, resolution reports, and uptime metrics.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-lg">07</span>
-          </div>
-        </div>
-
-        <!-- Service 8 -->
-        <div class="service-square relative w-full aspect-square bg-[#363B4D] rounded-lg p-5 sm:p-6">
-          <div class="text-white">
-            <h3 class="text-lg font-bold mb-3">Data Management & Analytics</h3>
-            <p class="text-justify leading-relaxed text-sm text-gray-300">
-                Implement secure data storage, reliable backup systems, and advanced analytics tools to protect valuable information and extract actionable business insights. Deliverables: Data architecture, backup systems, and analytics dashboards.
-            </p>
-          </div>
-          <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-            <span class="text-[#363B4D] font-bold text-lg">08</span>
-          </div>
-        </div>
-
-        <!-- Service 9 -->
-        <div class="service-square relative w-full aspect-square bg-[#363B4D] lg:h-80 rounded-lg p-5 sm:p-6">
-            <div class="text-white">
-              <h3 class="text-lg font-bold mb-3">IT Training & Change Management</h3>
-              <p class="text-justify leading-relaxed text-sm text-gray-300">
-                Offer comprehensive staff training and hands-on guidance during technology transitions to ensure smooth system adoption and organizational readiness. Deliverables: Training sessions, user guides, and change management plans.
-              </p>
-            </div>
-            <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-              <span class="text-[#363B4D] font-bold text-lg">09</span>
-            </div>
-        </div>
-
-        <!-- Service 10 -->
-        <div class="service-square relative w-full aspect-square bg-[#DDE5E5] lg:h-80 rounded-lg p-5 sm:p-6">
-            <div class="text-[#363B4D]">
-              <h3 class="text-lg font-bold mb-3">Consulting on Emerging Technologies</h3>
-              <p class="text-justify leading-relaxed text-sm text-[#363B4D]/80">
-                Provide expert guidance on harnessing emerging technologies like AI, IoT, and blockchain to drive innovation and sustain a competitive advantage. Deliverables: Trend reports, feasibility studies, and implementation strategies.
-              </p>
-            </div>
-            <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-lg">10</span>
-            </div>
-        </div>
-
-        <!-- Service 11 -->
-        <div class="service-square relative w-full h-auto bg-[#363B4D] rounded-lg p-5 sm:p-6">
-            <div class="text-white">
-              <h3 class="text-lg font-bold mb-3">Machine Learning & AI Integration</h3>
-              <p class="text-justify leading-relaxed text-sm text-gray-300">
-                Develop and implement tailored AI solutions and machine learning models to automate tasks, improve decisions, and generate insights. Examples include chatbots, behavior analysis, and workflow optimization. Deliverables: Custom ML/AI models, integration plans, and performance reports.
-              </p>
-            </div>
-            <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#DDE5E5] rounded-lg flex items-center justify-center">
-              <span class="text-[#363B4D] font-bold text-lg">11</span>
-            </div>
-        </div>
-
-        <!-- Service 12 -->
-        <div class="service-square relative w-full h-auto bg-[#DDE5E5] rounded-lg p-5 sm:p-6">
-            <div class="text-[#363B4D]">
-              <h3 class="text-lg font-bold mb-3">Business Consulting</h3>
-              <p class="text-justify leading-relaxed text-sm text-[#363B4D]/80">
-                Streamline workflows with Lean Six Sigma, reduce waste, and enhance productivity by standardizing processes. Align IT and operations with strategic goals, modernize technology, automate tasks, and optimize costs. Improve service quality, agility, and innovation while reducing customer pain points. Benchmark against best practices.
-              </p>
-            </div>
-            <div class="absolute -bottom-5 -right-5 w-16 h-16 bg-[#363B4D] rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-lg">12</span>
-            </div>
-        </div>
 
       </div>
     </div>
@@ -584,10 +437,10 @@
 
           <!-- Contact Section -->
           <!-- Contact Section -->
-<section id="contact" class="relative py-16 bg-white overflow-hidden">
+<section id="contact" class="relative pt-20 bg-white overflow-hidden">
     <!-- Background Pattern -->
-    <img src="contact.png" alt="Pattern"
-         class="absolute hidden lg:block inset-0 w-full h-full pointer-events-none" />
+    <img src="contact1.png" alt="Pattern"
+         class="absolute hidden lg:block inset-0 w-full   pointer-events-none" />
   
     <!-- Contact Content -->
     <div class="relative lg:pb-20 container mx-auto px-4">
@@ -629,65 +482,64 @@
       </div>
     </div>
     <!-- Footer -->
-  <footer class="bg-white text-gray-800  md:pt-20 py-12 relative z-10">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
-      
-      <img class="lg:h-28 md:h-20 md:w-auto" 
+  
+  </section>
+  <footer class="bg-[#364E4A] text-gray-800 py-12 relative z-10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-12">
+
+    <!-- Logo + Tagline -->
+    <div class="flex-shrink-0 w-full md:w-auto space-y-4">
+      <div class="flex items-start space-x-4">
+        <img class="lg:h-20 md:h-16 md:w-auto" 
              src="https://s3.eu-north-1.amazonaws.com/www.globytesolution.com/Images/globytelogolarge-05.png" 
              alt="Globyte Logo" />
-  
-      <div class="w-full md:w-auto">
-        <h2 class="text-xl font-bold mb-4">Company</h2>
-        <ul class="lg:flex justify-center align-items   md:gap-6  text-sm text-gray-600">
-          <li><a href="#home" class="hover:text-black font-bold transition-colors ">Home</a></li>
-          <li><a href="#about" class="hover:text-black font-bold transition-colors">About</a></li>
-          <li><a href="#service" class="hover:text-black font-bold transition-colors">Services</a></li>
-          <li><a href="#team" class="hover:text-black font-bold transition-colors">Team</a></li>
-          <li><a href="#contact" class="hover:text-black font-bold transition-colors">Contact</a></li>
-        </ul>
       </div>
-  
-      <!-- <div class="w-full md:w-auto">
-        <h3 class="text-lg font-bold mb-4">Services</h3>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li><a href="#" class="hover:text-black transition-colors">Consulting</a></li>
-          <li><a href="#" class="hover:text-black transition-colors">About</a></li>
-          <li><a href="#" class="hover:text-black transition-colors">Services</a></li>
-          <li><a href="#" class="hover:text-black transition-colors">Team</a></li>
-          <li><a href="#" class="hover:text-black transition-colors">Pricing</a></li>
-        </ul>
-      </div> -->
-  
-      <div class="w-full md:w-auto">
-        <h3 class="text-lg font-bold mb-4">Get In Touch</h3>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center space-x-2">
-            <svg class="w-4 h-4 text-[#3A3E56]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2.003 5.884L10 10.94l7.997-5.056A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-              <path d="M18 8.118l-8 5-8-5V15a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-            </svg>
-            <span>globyteconsulting@gmail.com</span>
-          </li>
-          <li class="flex items-center space-x-2">
-  <svg class="w-4 h-4 text-[#3A3E56]" fill="currentColor" viewBox="0 0 20 20">
-    <path fill-rule="evenodd" d="M2.003 5.884c.058-1.036.5-1.884 1.341-2.342l2.165-1.179a1.5 1.5 0 012.073.63l1.003 1.843a1.5 1.5 0 01-.345 1.86l-.976.805a11.048 11.048 0 005.388 5.388l.805-.976a1.5 1.5 0 011.86-.345l1.843 1.003a1.5 1.5 0 01.63 2.073l-1.179 2.165c-.458.841-1.306 1.283-2.342 1.341-2.563.143-5.06-.703-7.354-2.28-2.293-1.578-4.087-3.372-5.665-5.665-1.577-2.294-2.423-4.791-2.28-7.354z" clip-rule="evenodd"/>
-  </svg>
-  <span>+1 (720) 280-3704</span>
-</li>
+      <p class="text-sm text-white max-w-sm">Driving Innovation. Powering Businesses.</p>
+    </div>
 
-        </ul>
-      </div>
+    <!-- Company Links -->
+    <div class="w-full md:w-auto">
+      <h2 class="text-xl text-white font-bold mb-4">Company</h2>
+      <ul class="space-y-2 text-sm text-white">
+        <li><a href="#home" class="hover:text-black font-bold transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-black font-bold transition-colors">About</a></li>
+        <li><a href="#service" class="hover:text-black font-bold transition-colors">Services</a></li>
+        <li><a href="#team" class="hover:text-black font-bold transition-colors">Team</a></li>
+        <li><a href="#contact" class="hover:text-black font-bold transition-colors">Contact</a></li>
+      </ul>
     </div>
-  
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 border-t border-gray-200 pt-8 text-center">
-      <p class="text-sm text-gray-500">&copy; 2025 Globyte IT & Business Consulting. All rights reserved.</p>
+
+    <!-- Get In Touch -->
+    <div class="w-full md:w-auto">
+      <h3 class="text-lg text-white font-bold mb-4">Get In Touch</h3>
+      <ul class="space-y-2 text-sm text-white">
+        <li class="flex items-center space-x-2">
+          <svg class="w-4 h-4 text-[#3A3E56]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 10.94l7.997-5.056A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 5-8-5V15a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          <span>globyteconsulting@gmail.com</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <svg class="w-4 h-4 text-[#3A3E56]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M2.003 5.884c.058-1.036.5-1.884 1.341-2.342l2.165-1.179a1.5 1.5 0 012.073.63l1.003 1.843a1.5 1.5 0 01-.345 1.86l-.976.805a11.048 11.048 0 005.388 5.388l.805-.976a1.5 1.5 0 011.86-.345l1.843 1.003a1.5 1.5 0 01.63 2.073l-1.179 2.165c-.458.841-1.306 1.283-2.342 1.341-2.563.143-5.06-.703-7.354-2.28-2.293-1.578-4.087-3.372-5.665-5.665-1.577-2.294-2.423-4.791-2.28-7.354z" clip-rule="evenodd"/>
+          </svg>
+          <span>+1 (720) 280-3704</span>
+        </li>
+      </ul>
     </div>
-  </footer>
-  </section>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 border-t border-gray-200 pt-8 text-center">
+    <p class="text-sm text-white">&copy; 2025 Globyte IT & Business Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
 
 <button id="chatbotFab" 
-    class="fixed bottom-6 right-6 bg-[#85B8B2] text-white p-4 rounded-full shadow-lg hover:bg-[#3A3E56] transition-colors duration-300 z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+    class="fixed bottom-6 right-6 bg-[#85B8B2] text-white md:p-4 p-3 rounded-full shadow-lg hover:bg-[#3A3E56] transition-colors duration-300 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="md:h-8 h-5 md:w-8 w-5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 2H4c-1.103 0-2 .897-2 2v18l4-4h14c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
     </svg>
 </button>
@@ -793,7 +645,133 @@ mobileMenu.querySelectorAll('a, button').forEach(item => {
   });
 });
 
+const services = [
+  { 
+    id: 1, 
+    title: "IT Strategy & Planning", 
+    subtitle: "Aligning IT with business goals for long-term growth", 
+    description: "Collaborate with clients...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 2, 
+    title: "Systems Integration", 
+    subtitle: "Connecting platforms for seamless workflows", 
+    description: "Facilitate seamless integration...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  },
+  { 
+    id: 3, 
+    title: "Cybersecurity Services", 
+    subtitle: "Safeguarding your digital assets and data", 
+    description: "Conduct risk assessments...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 4, 
+    title: "Cloud Computing Solutions", 
+    subtitle: "Scalable, secure, and cost-efficient cloud adoption", 
+    description: "Enable cloud migration...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  },
+  { 
+    id: 5, 
+    title: "Managed IT Services", 
+    subtitle: "Proactive IT monitoring and maintenance", 
+    description: "Provide proactive monitoring...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 6, 
+    title: "Software Development & Customization", 
+    subtitle: "Tailored apps to meet unique business needs", 
+    description: "Design and develop applications...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  },
+  { 
+    id: 7, 
+    title: "IT Support & Troubleshooting", 
+    subtitle: "Reliable help when technical issues arise", 
+    description: "Deliver reliable technical support...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 8, 
+    title: "Data Management & Analytics", 
+    subtitle: "Turning raw data into valuable insights", 
+    description: "Implement secure data storage...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  },
+  { 
+    id: 9, 
+    title: "IT Training & Change Management", 
+    subtitle: "Empowering teams to adapt and thrive", 
+    description: "Offer comprehensive training...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 10, 
+    title: "Consulting on Emerging Technologies", 
+    subtitle: "Guidance on AI, IoT, and next-gen tools", 
+    description: "Provide expert guidance on AI, IoT...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  },
+  { 
+    id: 11, 
+    title: "Machine Learning & AI Integration", 
+    subtitle: "Smarter automation with AI-driven solutions", 
+    description: "Develop and implement ML models...", 
+    bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
+  },
+  { 
+    id: 12, 
+    title: "Business Consulting", 
+    subtitle: "Optimizing processes for efficiency and growth", 
+    description: "Streamline workflows with Lean Six Sigma...", 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+  }
+];
 
+
+
+// Populate the grid
+const grid = document.getElementById("servicesGrid");
+services.forEach(service => {
+  const card = document.createElement("div");
+  card.className = `service-square relative w-full aspect-square ${service.bgColor} rounded-lg p-6 ${service.textColor} flex flex-col justify-between`;
+
+  card.innerHTML = `
+    <div>
+      <h1 class="text-2xl font-bold">${service.title}</h1>
+      <p class="text-sm pt-2 opacity-80">${service.subtitle}</p>
+    </div>
+    <button onclick="openService(${service.id})"
+      class="absolute -bottom-4 -right-4 w-8 h-8 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center font-bold text-lg ${service.btnColor}">
+      &gt;
+    </button>
+  `;
+  grid.appendChild(card);
+});
+
+
+// Modal functions
+function openService(id) {
+  const service = services.find(s => s.id === id);
+  if (service) {
+    document.getElementById("modalTitle").textContent = service.title;
+    document.getElementById("modalDescription").textContent = service.description;
+    document.getElementById("serviceModal").classList.remove("hidden");
+  }
+}
+function closeModal() {
+  document.getElementById("serviceModal").classList.add("hidden");
+}
+
+document.getElementById("serviceModal").addEventListener("click", function(e) {
+  if (e.target === this) { // only close if clicking on the overlay, not inside the white box
+    closeModal();
+  }
+});
 
 
         // Populate Why Choose Us section
