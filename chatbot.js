@@ -74,7 +74,7 @@ function hideLoadingIndicator() {
 // Knowledge Base
 // -----------------------------
 const knowledgeBase = {
-    "Globyte": "Globyte LLC is an IT and business consulting firm that helps organizations grow through innovative technology, data solutions, and strategic business insights. We specialize in cloud infrastructure, AI integration, and digital transformation.",
+    "Globyte": "Globyte is an IT and business consulting firm dedicated to helping organizations modernize their technology, strengthen cybersecurity, streamline operations, and achieve sustainable growth. We deliver a full suite of services designed to align IT infrastructure with business strategy, driving efficiency, resilience, and long-term success.",
     "Why Choose Globyte": "We offer end-to-end services from IT strategy to implementation with a focus on cloud, AI, data, and user experience. Our team combines technical excellence with business acumen to deliver impactful, customized solutions",
     "Services": "We offer IT consulting, business consulting, AI & machine learning integration, cloud computing, cybersecurity, software development, managed IT services, IT training, and more.",
     "Cybersecurity": "We perform risk assessments and implement safeguards like encryption, firewalls, and incident response plans to secure your systems.",
