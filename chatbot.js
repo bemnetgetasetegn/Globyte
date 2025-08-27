@@ -74,19 +74,43 @@ function hideLoadingIndicator() {
 // Knowledge Base
 // -----------------------------
 const knowledgeBase = {
-    "Globyte": "Globyte is an IT and business consulting firm dedicated to helping organizations modernize their technology, strengthen cybersecurity, streamline operations, and achieve sustainable growth. We deliver a full suite of services designed to align IT infrastructure with business strategy, driving efficiency, resilience, and long-term success.",
-    "Why Choose Globyte": "We offer end-to-end services from IT strategy to implementation with a focus on cloud, AI, data, and user experience. Our team combines technical excellence with business acumen to deliver impactful, customized solutions",
-    "Services": "We offer IT consulting, business consulting, AI & machine learning integration, cloud computing, cybersecurity, software development, managed IT services, IT training, and more.",
-    "Cybersecurity": "We perform risk assessments and implement safeguards like encryption, firewalls, and incident response plans to secure your systems.",
-    "Cloud Solutions": "We enable efficient cloud migration and management across AWS, Azure, and Google Cloud, optimizing cost, scalability, and performance.",
-    "Software Development": "We design and develop customized applications tailored to meet unique business needs, from concept to deployment.",
-    "Data Management": "We implement secure data storage, reliable backup systems, and advanced analytics tools for actionable insights.",
-    "AI & ML Integration": "We develop tailored AI solutions such as chatbots, workflow automation, and predictive analytics to enhance decision-making.",
-    "Team": "Our team includes cloud-certified architects, UI/UX designers, developers, project managers, and business consultants working together to ensure top-quality solutions.",
-    "Process": "Our process includes 1) Discovery & Assessment, 2) Gap Analysis, 3) Solution Design, 4) Implementation & Integration, 5) Monitoring & Continuous Improvement.",
-    "Contact": "You can reach us at globyteconsulting@gmail.com or call +17202803704.",
-    "Location": "Please contact us at globyteconsulting@gmail.com or call +17202803704."
+  "Globyte": "Globyte is an IT and business consulting firm helping organizations modernize technology, strengthen cybersecurity, streamline operations, and achieve sustainable growth.",
+  
+  "Mission": "Driving Innovation. Powering Businesses. Globyte delivers IT and business consulting services aligned with long-term growth, resilience, and efficiency.",
+  
+  "Why Choose Globyte": "Our team is made up of cloud-certified architects, UI/UX designers, full-stack developers, and strategic partners, supported by interns and consultants. We deliver innovative, flexible, and customized solutions.",
+  
+  "Services": "We provide IT strategy & planning, systems integration, cybersecurity, cloud computing, managed IT services, software development, IT support, data management, analytics, training, emerging technologies consulting, AI/ML integration, and business consulting.",
+  
+  // --- Core Services ---
+  "IT Strategy & Planning": "We align IT with business goals, ensuring technology supports long-term growth and strategic vision.",
+  "Systems Integration": "We connect platforms and tools to create seamless, automated workflows across your organization.",
+  "Cybersecurity Services": "We safeguard digital assets with risk assessments, encryption, firewalls, compliance, and incident response planning.",
+  "Cloud Computing": "We help businesses adopt and manage AWS, Azure, and Google Cloud with scalable, cost-efficient solutions.",
+  "Managed IT Services": "We proactively monitor, maintain, and optimize IT systems to prevent downtime and improve performance.",
+  "Software Development": "We design and develop tailored applications to meet unique business needs, from concept to deployment.",
+  "IT Support": "Reliable troubleshooting and technical support for issues that arise with your IT infrastructure.",
+  "Data Management": "We implement secure storage, backup, governance, and advanced analytics for actionable business insights.",
+  "AI & Machine Learning": "We integrate AI solutions like predictive analytics, workflow automation, and intelligent chatbots.",
+  "Business Consulting": "We optimize processes to increase efficiency, reduce costs, and drive growth.",
+  
+  // --- Process Steps ---
+  "Process": "Our consulting process includes 5 steps: Discovery & Assessment, Gap Analysis & Strategy Alignment, Solution Design, Implementation & Integration, Monitoring & Continuous Improvement.",
+  "Discovery & Assessment": "Step 1. We review business goals, assess technology, interview stakeholders, and analyze data. Deliverables: current-state analysis, pain point map, opportunity matrix.",
+  "Gap Analysis & Strategy Alignment": "Step 2. We identify operational inefficiencies, benchmark best practices, and align IT with business priorities. Deliverables: gap analysis report, roadmap, and initiatives.",
+  "Solution Design": "Step 3. We design optimized workflows, IT architecture, and data strategies while ensuring compliance and security. Deliverables: future-state process maps and solution proposals.",
+  "Implementation & Integration": "Step 4. We manage projects, integrate systems (ERP, CRM, data platforms), provide training, and test solutions. Deliverables: go-live plans, training docs, configurations.",
+  "Monitoring & Continuous Improvement": "Step 5. We define KPIs, monitor systems, collect feedback, and maintain an innovation pipeline. Deliverables: post-implementation reviews, dashboards, improvement backlog.",
+  
+  // --- Team ---
+  "Team": "Our leadership team includes: Hiruy Shita (Principal Architect & Data Solutions Lead), Ablante Legesse (Data & AI Strategist), Alex Belay (Business Process Optimization Lead), Michael Alemu (Tech Lead - Microsoft & Azure), and Befkadu Gebru (Cloud & DevOps Lead).",
+  
+  // --- Practical Info ---
+  "Location": "please reach us at globyteconsulting@gmail.com or call +17202803704.",
+  "Contact": "You can reach us at globyteconsulting@gmail.com or call +17202803704.",
+  "Consultation": "To schedule a consultation, please reach out via email or phone. We’ll be happy to discuss your project."
 };
+
 
 // Search FAQ
 function searchFAQ(question) {
@@ -139,54 +163,90 @@ async function sendMessage() {
         }
 
         // Fallback: Use Groq API
-        const GROQ_API_KEY = "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"; // ⚠️ Replace with your real key
+        const GROQ_API_KEYS = [
+            "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",
+            "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",
+            "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"
+        ];
         const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
+        let currentKeyIndex = 0;
+
+        function getNextApiKey() {
+            const key = GROQ_API_KEYS[currentKeyIndex];
+            console.log(`🔑 Using API key index: ${currentKeyIndex}`);
+            currentKeyIndex = (currentKeyIndex + 1) % GROQ_API_KEYS.length;
+            return key;
+        }
 
         const context = Object.entries(knowledgeBase)
             .map(([key, value]) => `${key}: ${value}`)
             .join("\n\n");
 
         const messages = [
-            {
-                role: "system",
-                content: `You are a helpful assistant for Globyte, an IT and business consulting firm. 
-                Use the knowledge base below to answer questions:
-                ${context}
-                If unsure, politely suggest contacting human support.`
-            },
-            { role: "user", content: prompt }
-        ];
+                    {
+                        role: "system",
+                        content: `You are a helpful customer service assistant for EastSide Agro Industry, a coffee export company. 
+                        Use the following information to answer questions accurately and helpfully:
+                        
+                        ${context}
+                        
+                        If you don't know the answer based on the provided information, politely say so and offer to connect the user with a human representative.
+                        Keep your responses concise and focused on the user's question.`
+                    },
+                    {
+                        role: "user",
+                        content: prompt
+                    }
+                ];
 
-        const response = await fetch(GROQ_API_URL, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${GROQ_API_KEY}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                model: "llama-3.1-8b-instant",
-                messages: messages,
-                temperature: 0.7,
-                max_tokens: 512
-            })
-        });
+        let data = null;
+                let lastError = null;
+
+                for (let i = 0; i < GROQ_API_KEYS.length; i++) {
+                    const apiKey = getNextApiKey();
+                    try {
+                        const response = await fetch(GROQ_API_URL, {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${apiKey}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                model: "llama-3.1-8b-instant", // You can change this to other available models
+                                messages: messages,
+                                temperature: 0.7,
+                                max_tokens: 1024
+                            })
+                        });
+
+                        if (response.ok) {
+                            data = await response.json();
+                            break; // success, exit loop
+                        } else {
+                            lastError = new Error(`API error: ${response.status}`);
+                            console.warn(`⚠️ API key index ${i} failed with status: ${response.status}`);
+                        }
+                    } catch (err) {
+                        lastError = err;
+                        console.warn(`⚠️ API key index ${i} failed with error: ${err.message}`);
+                    }
+                }
 
         hideLoadingIndicator();
 
-        if (!response.ok) throw new Error(`API error: ${response.status}`);
+                if (data && data.choices && data.choices.length > 0) {
+                    const botResponse = data.choices[0].message.content;
+                    appendMessage(botResponse, 'bot');
+                } else {
+                    console.error('Error fetching from Groq API:', lastError);
+                    appendMessage("I'm not sure how to answer that. Would you like me to connect you with a human representative?", 'bot');
+                }
 
-        const data = await response.json();
-        if (data.choices && data.choices.length > 0) {
-            appendMessage(data.choices[0].message.content, 'bot');
-        } else {
-            appendMessage("I'm not sure how to answer that. Can I connect you with a human representative?", 'bot');
-        }
-
-    } catch (error) {
-        console.error("Chatbot error:", error);
-        hideLoadingIndicator();
-        appendMessage("⚠️ I'm having trouble right now. Please try again later.", 'bot');
-    }
+            } catch (error) {
+                console.error('Error fetching from Groq API:', error);
+                hideLoadingIndicator();
+                appendMessage("I'm having trouble connecting right now. Please try again later or contact us directly.", 'bot');
+            }
 }
 
 // -----------------------------
