@@ -14,13 +14,15 @@ const sendChatBtn = document.getElementById('sendChat');
 let chatHistory = [];
 
 // API Configuration
-const GROQ_API_KEYS = [
-    "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",
-    "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",
-    "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"
-];
-const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
+const GROQ_API_URL = process.env.GROQ_API_URL;
 let currentKeyIndex = 0;
+
+// Load API keys from environment variables
+const GROQ_API_KEYS = [
+    process.env.GROQ_API_KEY_1,
+    process.env.GROQ_API_KEY_2,
+    process.env.GROQ_API_KEY_3
+].filter(key => key !== undefined && key !== null);
 
 // -----------------------------
 // Utility Functions
