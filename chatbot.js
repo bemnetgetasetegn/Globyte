@@ -2,8 +2,6 @@
 // Chatbot - Globyte Assistant
 // =============================
 
-
-
 // DOM Elements
 const chatbotFab = document.getElementById('chatbotFab');
 const chatbotContainer = document.getElementById('chatbotContainer');
@@ -14,6 +12,15 @@ const sendChatBtn = document.getElementById('sendChat');
 
 // Store chat history
 let chatHistory = [];
+
+// API Configuration
+const GROQ_API_KEYS = [
+    "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",
+    "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",
+    "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"
+];
+const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
+let currentKeyIndex = 0;
 
 // -----------------------------
 // Utility Functions
@@ -70,6 +77,17 @@ function hideLoadingIndicator() {
     if (loadingElement) loadingElement.remove();
 }
 
+// Get next API key without incrementing the index
+function getCurrentApiKey() {
+    return GROQ_API_KEYS[currentKeyIndex];
+}
+
+// Move to next API key
+function moveToNextApiKey() {
+    currentKeyIndex = (currentKeyIndex + 1) % GROQ_API_KEYS.length;
+    console.log(`🔑 Moved to API key index: ${currentKeyIndex}`);
+}
+
 // -----------------------------
 // Knowledge Base
 // -----------------------------
@@ -108,9 +126,8 @@ const knowledgeBase = {
   // --- Practical Info ---
   "Location": "please reach us at globyteconsulting@gmail.com or call +17202803704.",
   "Contact": "You can reach us at globyteconsulting@gmail.com or call +17202803704.",
-  "Consultation": "To schedule a consultation, please reach out via email or phone. We’ll be happy to discuss your project."
+  "Consultation": "To schedule a consultation, please reach out via email or phone. We'll be happy to discuss your project."
 };
-
 
 // Search FAQ
 function searchFAQ(question) {
@@ -163,90 +180,88 @@ async function sendMessage() {
         }
 
         // Fallback: Use Groq API
-        const GROQ_API_KEYS = [
-            "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",
-            "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",
-            "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"
-        ];
-        const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
-        let currentKeyIndex = 0;
-
-        function getNextApiKey() {
-            const key = GROQ_API_KEYS[currentKeyIndex];
-            console.log(`🔑 Using API key index: ${currentKeyIndex}`);
-            currentKeyIndex = (currentKeyIndex + 1) % GROQ_API_KEYS.length;
-            return key;
-        }
-
         const context = Object.entries(knowledgeBase)
             .map(([key, value]) => `${key}: ${value}`)
             .join("\n\n");
 
         const messages = [
-                    {
-                        role: "system",
-                        content: `You are a helpful customer service assistant for EastSide Agro Industry, a coffee export company. 
-                        Use the following information to answer questions accurately and helpfully:
-                        
-                        ${context}
-                        
-                        If you don't know the answer based on the provided information, politely say so and offer to connect the user with a human representative.
-                        Keep your responses concise and focused on the user's question.`
-                    },
-                    {
-                        role: "user",
-                        content: prompt
-                    }
-                ];
+            {
+                role: "system",
+                content: `You are a helpful customer service assistant for Globyte It and Business consulting, a consulting firm dedicated to helping organizations. 
+                Use the following information to answer questions accurately and helpfully:
+                
+                ${context}
+                
+                If you don't know the answer based on the provided information, politely say so and offer to connect the user with a human representative.
+                Keep your responses concise and focused on the user's question.`
+            },
+            {
+                role: "user",
+                content: prompt
+            }
+        ];
 
         let data = null;
-                let lastError = null;
+        let lastError = null;
+        let attempts = 0;
+        const maxAttempts = GROQ_API_KEYS.length;
 
-                for (let i = 0; i < GROQ_API_KEYS.length; i++) {
-                    const apiKey = getNextApiKey();
-                    try {
-                        const response = await fetch(GROQ_API_URL, {
-                            method: 'POST',
-                            headers: {
-                                'Authorization': `Bearer ${apiKey}`,
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                model: "llama-3.1-8b-instant", // You can change this to other available models
-                                messages: messages,
-                                temperature: 0.7,
-                                max_tokens: 1024
-                            })
-                        });
+        // Try all keys until we get a successful response
+        while (attempts < maxAttempts) {
+            const apiKey = getCurrentApiKey();
+            console.log(`🔑 Attempt ${attempts + 1}: Using API key index: ${currentKeyIndex}`);
+            
+            try {
+                const response = await fetch(GROQ_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: "llama-3.1-8b-instant",
+                        messages: messages,
+                        temperature: 0.7,
+                        max_tokens: 1024
+                    })
+                });
 
-                        if (response.ok) {
-                            data = await response.json();
-                            break; // success, exit loop
-                        } else {
-                            lastError = new Error(`API error: ${response.status}`);
-                            console.warn(`⚠️ API key index ${i} failed with status: ${response.status}`);
-                        }
-                    } catch (err) {
-                        lastError = err;
-                        console.warn(`⚠️ API key index ${i} failed with error: ${err.message}`);
-                    }
+                if (response.ok) {
+                    data = await response.json();
+                    break; // success, exit loop
+                } else {
+                    lastError = new Error(`API error: ${response.status} ${response.statusText}`);
+                    console.warn(`⚠️ API key index ${currentKeyIndex} failed with status: ${response.status}`);
+                    
+                    // Move to next key for next attempt
+                    moveToNextApiKey();
+                    attempts++;
                 }
+            } catch (err) {
+                lastError = err;
+                console.warn(`⚠️ API key index ${currentKeyIndex} failed with error: ${err.message}`);
+                
+                // Move to next key for next attempt
+                moveToNextApiKey();
+                attempts++;
+            }
+        }
 
         hideLoadingIndicator();
 
-                if (data && data.choices && data.choices.length > 0) {
-                    const botResponse = data.choices[0].message.content;
-                    appendMessage(botResponse, 'bot');
-                } else {
-                    console.error('Error fetching from Groq API:', lastError);
-                    appendMessage("I'm not sure how to answer that. Would you like me to connect you with a human representative?", 'bot');
-                }
+        if (data && data.choices && data.choices.length > 0) {
+            const botResponse = data.choices[0].message.content;
+            appendMessage(botResponse, 'bot');
+        } else {
+            console.error('All API keys failed:', lastError);
+            appendMessage("I'm not sure how to answer that. Would you like me to connect you with a human representative?", 'bot');
+        }
 
-            } catch (error) {
-                console.error('Error fetching from Groq API:', error);
-                hideLoadingIndicator();
-                appendMessage("I'm having trouble connecting right now. Please try again later or contact us directly.", 'bot');
-            }
+    } catch (error) {
+        console.error('Unexpected error:', error);
+        hideLoadingIndicator();
+        appendMessage("I'm having trouble connecting right now. Please try again later or contact us directly.", 'bot');
+    }
 }
 
 // -----------------------------
