@@ -170,15 +170,15 @@
 
   <!-- Hero Section -->
   <!-- Hero Section -->
-<section id="home" class="relative min-h-screen flex items-center  p-6 lg:p-28 pt-32 lg:pt-36 xl:bg-[url('background.png')] bg-cover bg-center bg-no-repeat">
+<section id="home" class="relative min-h-screen flex items-center p-6 lg:p-28 pt-32 lg:pt-36 xl:bg-[url('background.png')] bg-cover bg-center bg-no-repeat">
   <div class="container mx-auto grid grid-cols-1 lg:mt-24 lg:grid-cols-2 gap-12 items-center">
     <!-- Left Content -->
     <div class="space-y-6 text-center lg:text-left">
-      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
         <span class="text-globyte-dark">Driving Innovation.</span><br>
         <span class="text-globyte-gray whitespace-nowrap">Powering Businesses.</span>
       </h2>
-      <p class="text-base sm:text-lg text-globyte-dark max-w-xl mx-auto py-3 lg:mx-0">
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-globyte-dark max-w-xl mx-auto py-3 lg:mx-0">
         Globyte is an IT and business consulting firm dedicated to helping organizations modernize their technology, strengthen cybersecurity, streamline operations, and achieve sustainable growth. We deliver a full suite of services designed to align IT infrastructure with business strategy, driving efficiency, resilience, and long-term success.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -186,7 +186,6 @@
         <a href="#contact"><button class="bg-[#3A3E56] text-white px-6 py-3 rounded-lg hover:bg-globyte-gray transition-colors"> Schedule a Consultation</button></a>
       </div>
     </div>
-
     <!-- Right Image -->
     <!-- <div class="hidden lg:block justify-center  relative w-full">
       <img src="background.png" alt="Hero Illustration" 
@@ -279,7 +278,6 @@
       
           <!-- Steps and Details -->
           <div class="space-y-6">
-            
             <!-- Step 1 -->
             <div class="flex flex-col md:flex-row gap-6 items-start">
               <div class="w-full md:w-[30%] flex items-center justify-between p-6 bg-[#cfe1e2] rounded-lg shadow">
@@ -287,17 +285,35 @@
                   <span class="font-semibold text-6xl text-white">01</span>
                   <p class="text-globyte-dark font-bold pt-1">Discovery & Assessment</p>
                 </div>
-                <div class="w-8 h-8 bg-[#3a3a4f] text-white flex items-center justify-center rounded-full">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center text-white justify-center rounded-full bg-[#3a3a4f] w-8 h-8 min-w-8 min-h-8">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div class=" text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
-                <p>Objective: Assess the client’s current business and IT landscape to establish a clear foundation for strategy, planning, and solution development. Activities: Business review (analyzing goals, structure, KPIs, and core processes), Technology assessment (reviewing systems, tools, software, and infrastructure), Stakeholder interviews (gathering insights into pain points and improvement opportunities), and Data collection (reviewing documentation, reports, and system data). Deliverables: Current state analysis, pain point map, and opportunity matrix.</p>
+              <div class="text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
+                <p>We evaluate your business and IT landscape to build a clear foundation for growth.</p>
+                <div class="mt-4 flex flex-col md:flex-row gap-4">
+                  <div class="md:pl-5 md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">What we do</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Review goals, systems, and workflows</li>
+                      <li>Interview stakeholders</li>
+                      <li>Analyze data and performance</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">Deliverables</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Current state analysis</li>
+                      <li>Pain point map</li>
+                      <li>Opportunity matrix</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-      
+
             <!-- Step 2 -->
             <div class="flex flex-col md:flex-row gap-6 items-start">
               <div class="w-full md:w-[30%] flex items-center justify-between p-6 bg-[#cfe1e2] rounded-lg shadow">
@@ -305,17 +321,35 @@
                   <span class="font-semibold text-6xl text-white">02</span>
                   <p class="text-globyte-dark font-bold pt-1">Gap Analysis & Strategy Alignment</p>
                 </div>
-                <div class="w-8 h-8 bg-[#3a3a4f] text-white flex items-center justify-center rounded-full">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center text-white justify-center rounded-full bg-[#3a3a4f] w-8 h-8 min-w-8 min-h-8">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div class=" text-justify  w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
-                <p>Objective: Identify gaps between current performance and strategic objectives to inform targeted improvements and align initiatives with business goals. Activities: Gap identification (operational inefficiencies, technology underutilization, compliance risks), Benchmarking (comparing against industry best practices), and Strategic alignment (aligning IT capabilities with business priorities). Deliverables: Gap analysis report, IT-business alignment roadmap, and prioritized initiatives.</p>
+              <div class="text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
+                <p>We identify performance gaps and align IT initiatives with business goals for targeted improvement.</p>
+                <div class="mt-4 flex flex-col md:flex-row gap-4">
+                  <div class="md:pl-5 md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">What we do</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Uncover inefficiencies and risks</li>
+                      <li>Benchmark against industry best practices</li>
+                      <li>Align technology with strategic priorities</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">Deliverables</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Gap analysis report</li>
+                      <li>Alignment roadmap</li>
+                      <li>Prioritized initiatives</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-      
+
             <!-- Step 3 -->
             <div class="flex flex-col md:flex-row gap-6 items-start">
               <div class="w-full md:w-[30%] flex items-center justify-between p-6 bg-[#cfe1e2] rounded-lg shadow">
@@ -323,17 +357,35 @@
                   <span class="font-semibold text-6xl text-white">03</span>
                   <p class="text-globyte-dark font-bold pt-1">Solution Design</p>
                 </div>
-                <div class="w-8 h-8 bg-[#3a3a4f] text-white flex items-center justify-center rounded-full">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center text-white justify-center rounded-full bg-[#3a3a4f] w-8 h-8 min-w-8 min-h-8">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div class=" text-justify  w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
-                <p>Objective: Design future-state business processes and an optimized IT ecosystem to support scalability, efficiency, and strategic alignment. Activities: Process optimization (redesigning workflows for efficiency and automation), Technology solutions (recommending platforms, tools, and integrations), Data strategy (improving data governance, reporting, and analytics capabilities), and Security & Compliance (ensuring regulatory adherence and a robust cybersecurity posture). Deliverables: Future-state process maps, IT architecture plan, and detailed solution proposals.</p>
+              <div class="text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
+                <p>We design efficient, scalable business processes and IT systems that align with your strategic goals.</p>
+                <div class="mt-4 flex flex-col md:flex-row gap-4">
+                  <div class="md:pl-5 md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">What we do</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Optimize workflows and automation</li>
+                      <li>Recommend technology platforms and integrations</li>
+                      <li>Strengthen data, security, and compliance</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">Deliverables</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Future-state process maps</li>
+                      <li>IT architecture plan</li>
+                      <li>Solution proposals</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-      
+
             <!-- Step 4 -->
             <div class="flex flex-col md:flex-row gap-6 justify-center items-start">
               <div class="w-full md:w-[30%] flex items-center justify-between p-6 bg-[#cfe1e2] rounded-lg shadow">
@@ -341,17 +393,35 @@
                   <span class="font-semibold text-6xl text-white">04</span>
                   <p class="text-globyte-dark font-bold pt-1">Implementation & Integration</p>
                 </div>
-                <div class="w-8 h-8 bg-[#3a3a4f] text-white flex items-center justify-center rounded-full">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center text-white justify-center rounded-full bg-[#3a3a4f] w-8 h-8 min-w-8 min-h-8">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div class=" text-justify  w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
-                <p>Objective: Deploy and seamlessly integrate recommended solutions to ensure alignment with business objectives and minimal disruption to operations. Activities: Project management (Agile or waterfall execution with defined milestones), System integration (ERP, CRM, data platforms, and automation tools), Training & change management (supporting user adoption and cultural shifts), and Testing & QA (ensuring functionality and performance). Deliverables: Go-live plans, comprehensive training documentation, and system configurations.</p>
+              <div class="text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
+                <p>We deploy and integrate solutions smoothly to align with business goals and minimize disruption.</p>
+                <div class="mt-4 flex flex-col md:flex-row gap-4">
+                  <div class="md:pl-5 md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">What we do</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Manage projects and milestones</li>
+                      <li>Integrate systems and automation tools</li>
+                      <li>Train teams and ensure quality performance</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">Deliverables</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Go-live plan</li>
+                      <li>Training documentation</li>
+                      <li>System configurations</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-      
+
             <!-- Step 5 -->
             <div class="flex flex-col md:flex-row gap-6 justify-center items-start">
               <div class="w-full md:w-[30%] flex items-center justify-between p-6 bg-[#cfe1e2] rounded-lg shadow">
@@ -359,17 +429,34 @@
                   <span class="font-semibold text-6xl text-white">05</span>
                   <p class="text-globyte-dark font-bold pt-1">Monitoring & Continuous Improvement</p>
                 </div>
-                <div class="w-8 h-8 bg-[#3a3a4f] text-white flex items-center justify-center rounded-full">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center text-white justify-center rounded-full bg-[#3a3a4f] w-8 h-8 min-w-8 min-h-8">
+                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div class="text-justify  w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
-                <p>Objective: Monitor performance metrics and continuously adapt solutions to ensure sustained value and alignment with evolving business needs. Activities: Performance metrics (defining KPIs and dashboards), Support & optimization (ongoing enhancements and troubleshooting), Feedback loops (regular check-ins with stakeholders), and Innovation pipeline (fostering a culture of continuous innovation). Deliverables: Post-implementation reviews, KPI dashboards, and an improvement backlog.</p>
+              <div class="text-justify w-full md:w-[70%] border border-gray-300 rounded-lg p-2 min-h-[64px]">
+                <p>We evaluate your business and IT landscape to build a clear foundation for growth.</p>
+                <div class="mt-4 flex flex-col md:flex-row gap-4">
+                  <div class="md:pl-5 md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">What we do</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Define KPIs and dashboards</li>
+                      <li>Optimize systems and support users</li>
+                      <li>Gather feedback and drive innovation</li>
+                    </ul>
+                  </div>
+                  <div class="md:w-1/2 w-full">
+                    <p class="font-semibold mb-1">Deliverables</p>
+                    <ul class="list-disc list-inside pl-4 text-base sm:text-sm bg-white rounded-lg p-2 overflow-x-auto">
+                      <li>Post-implementation reviews</li>
+                      <li>KPI dashboards</li>
+                      <li>Improvement backlog</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-      
           </div>
         </div>
       </section>
@@ -411,25 +498,25 @@
           
                 <!-- Profile Card 1 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/Hiruy.jpg" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Hiruy Shita</h3>
                   <p class="text-sm text-gray-600 mb-4 text-center">Principal Architect & Data Solutions Lead</p>
           
                   <p class="text-sm text-gray-700 mb-4 text-center description">
-                    Highly accomplished Project Lead and Architect...
+                     A seasoned Project Lead and Architect with over 15 years of experience...
                   </p>
                   <p class="text-sm text-gray-700 mb-4 text-center hidden full-description">
-                    Highly accomplished Project Lead and Architect with over 15 years of experience in designing and implementing comprehensive data solutions...
+                    A seasoned Project Lead and Architect with over 15 years of experience in end-to-end data solutions. He specializes in data engineering, analytics, AI/ML integration, and business intelligence—bridging on-premise and cloud systems. With a strong background in founding and leading startups in Ethiopia and the U.S., he combines technical expertise with business insight. His studies in Supply & Inventory Management and International Business equip him to align technology with strategic goals and deliver impactful, scalable solutions.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
                 <!-- Profile Card 2 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/Ablante.jpg" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Ablante Legesse</h3>
@@ -439,70 +526,70 @@
                     Dynamic Technical Leader and Data & AI Strategist...
                   </p>
                   <p class="text-sm text-gray-700 mb-4 text-center hidden full-description">
-                    Dynamic Technical Leader and Data & AI Strategist with over 18 years of experience guiding Fortune 100 companies...
+                    Dynamic Technical Lead and Data & AI Strategist with 18+ years of experience guiding Fortune 100 companies through large-scale data transformations. He builds modern data platforms, scales cloud infrastructure, and delivers impactful analytics across industries, including healthcare, government, and retail. Passionate about solving real-world problems through AI, he leads global teams to turn complex data into actionable insight and drive innovation.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
           
                 <!-- Profile Card 3 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/Alex.jpg" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Alex Belay</h3>
                   <p class="text-sm text-gray-600 mb-4 text-center">Business Process Optimization Lead</p>
           
                   <p class="text-sm text-gray-700 mb-4 text-center description">
-                    Process Improvement Expert, Alex specializes in analyzing and optimizing business processes to enhance efficiency, reduce costs, and improve performan...
+                    our Process Improvement Expert, Alex specializes in analyzing and optimizing business processes to enhance...
                   </p>
                   <p class="text-sm text-gray-700 mb-4 text-center hidden full-description">
-                    Process Improvement Expert, Alex specializes in analyzing and optimizing business processes to enhance efficiency, reduce costs, and improve performance. He is highly skilled in Lean, Six Sigma, and Agile methodologies, which he leverages to streamline workflows and eliminate inefficiencies. Alex has a strong track record of driving measurable results through data analysis, strategic planning, and collaborative efforts with cross-functional teams, ultimately achieving sustainable growth and operational excellence.
+                    Our Process Improvement Expert, Alex, specializes in analyzing and optimizing business processes to enhance efficiency, reduce costs, and improve performance. He is highly skilled in Lean, Six Sigma, and Agile methodologies, which he leverages to streamline workflows and eliminate inefficiencies. Alex has a strong track record of driving measurable results through data analysis, strategic planning, and collaborative efforts with cross-functional teams, ultimately achieving sustainable growth and operational excellence.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
                 <!-- Profile Card 4 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/Michael.jpg" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Michael Alemu</h3>
                   <p class="text-sm text-gray-600 mb-4 text-center">Tech Lead</p>
           
                   <p class="text-sm text-gray-700 mb-4 text-center description">
-                    Microsoft Shop Guru, Michael brings over 10 years of expertise in Microsoft SQL, Microsoft Azure Cloud, Azure Databricks, Data Analytics, Business Intelligence, and Data Engineering...
+                    Our Microsoft Shop Guru, Michael brings over 10 years of expertise in Microsoft SQL, Microsoft Azure Cloud, Azure Databricks, Data Analytics, Business Intelligence, and Data Engineering...
                   </p>
                   <p class="text-sm text-gray-700 mb-4 text-center hidden full-description">
-                    Microsoft Shop Guru, Michael brings over 10 years of expertise in Microsoft SQL, Microsoft Azure Cloud, Azure Databricks, Data Analytics, Business Intelligence, and Data Engineering. He has extensive experience in delivering end-to-end solutions for data pipeline engineering, data transformation, and solution architecture across Fortune 100 companies in various industries.
+                    Our Microsoft Shop Guru, Michael, brings over 10 years of expertise in Microsoft SQL, Microsoft Azure Cloud, Azure Databricks, Data Analytics, Business Intelligence, and Data Engineering. He has extensive experience in delivering end-to-end solutions for data pipeline engineering, data transformation, and solution architecture across Fortune 100 companies in various industries.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
                 <!-- Profile Card 5 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/Befekadu.jpg" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Befkadu Gebru</h3>
                   <p class="text-sm text-gray-600 mb-4 text-center">Co-Tech Lead</p>
           
                   <p class="text-sm text-gray-700 mb-4 text-center description">
-                    Seasoned Cloud Engineer, Database Administrator, and DevOps Leader with over 15 years of hands-on and strategic experience driving infrastructure mode...
+                    Seasoned Cloud Engineer, Database Administrator, and DevOps Leader with 15+ years of experience modernizing infrastructure and driving...
                   </p>
                   <p class="text-sm text-gray-700 mb-4 text-center hidden full-description">
-                    Seasoned Cloud Engineer, Database Administrator, and DevOps Leader with over 15 years of hands-on and strategic experience driving infrastructure modernization and operational excellence. Befkadu possesses demonstrated expertise in leading cross-functional teams, architecting and deploying cloud-native solutions (AWS, Azure, GCP), managing complex database environments (SQL, NoSQL), and implementing robust DevOps practices including CI/CD, containerization (Docker, Kubernetes), and infrastructure as code (Terraform, CloudFormation). He has a proven track record of mentoring teams, improving system reliability, and aligning technology initiatives with business objectives. Befkadu is recognized for his visionary leadership, strong technical acumen, and a commitment to delivering secure, scalable, and high-performing systems.
+                    A seasoned Cloud Engineer, Database Administrator, and DevOps Leader with 15+ years of experience modernizing infrastructure and driving operational excellence. He specializes in cloud-native solutions, database management, CI/CD automation, and infrastructure as code. Known for his technical depth and leadership, Befkadu builds secure, scalable, and high-performing systems that align technology with business goals.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
                 <!-- Profile Card 6 -->
                 <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center border border-gray-200 w-full max-w-xs">
-                  <div class="w-40 h-40 rounded-full border-4 border-globyte-sage mb-4 overflow-hidden flex items-center justify-center">
+                  <div class="w-40 h-40 rounded-full border-4 border-[#393d52] mb-4 overflow-hidden flex items-center justify-center">
                     <img src="./Globyte images/people/interns-05.png" alt="" srcset="">
                   </div>
                   <h3 class="text-md font-semibold text-gray-800 mb-1 text-center">Interns</h3>
@@ -515,7 +602,7 @@
                     Our entry-level contributors are trained in web development, supporting project delivery and growing into future full-time roles under the mentorship of our senior team members.
                   </p>
           
-                  <button class="text-xs text-globyte-sage hover:underline toggle-btn">Read More</button>
+                  <button class="text-xs text-[#393d52] hover:underline toggle-btn">Read More</button>
                 </div>
           
               </main>
@@ -593,11 +680,11 @@
   </section>
 
   <footer class="bg-[#5C8B87] text-gray-800 py-12 relative z-10">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-12">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-1 flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-12">
 
     <!-- Logo + Tagline -->
-    <div class="flex-shrink-0 w-full md:w-auto space-y-4">
-      <div class="flex items-start space-x-4">
+    <div class="flex-shrink-0 w-full md:w-auto space-y-4 mr-20">
+      <div class="flex items-start space-x-2">
         <img class="lg:h-20 md:h-16 md:w-auto" 
              src="https://s3.eu-north-1.amazonaws.com/www.globytesolution.com/Images/globytelogolarge-05.png" 
              alt="Globyte Logo" />
@@ -639,7 +726,7 @@
   </div>
 
   <!-- Footer Bottom -->
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 border-t border-gray-200 pt-8 text-center">
+  <div class="container mx-auto px-16 sm:px-6 lg:px-8 mt-12 border-t border-gray-200 pt-8 text-center">
     <p class="text-sm text-white">&copy; 2025 Globyte IT & Business Consulting. All rights reserved.</p>
   </div>
 </footer>
@@ -757,85 +844,73 @@ const services = [
   { 
     id: 1, 
     title: "IT Strategy & Planning", 
-    subtitle: "Aligning IT with business goals for long-term growth", 
     description: "Collaborate with clients to design a strategic technology roadmap that aligns with business goals, enabling digital transformation, operational efficiency, and sustainable long-term growth. Deliverables: Strategic IT plan, budget analysis, and timeline.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
   },
   { 
     id: 2, 
     title: "Systems Integration", 
-    subtitle: "Connecting platforms for seamless workflows", 
     description: "Facilitate the seamless integration of software, hardware, and network systems to streamline workflows, reduce operational bottlenecks, and enhance overall organizational efficiency. Deliverables: Integrated systems, testing reports, and comprehensive documentation.", 
     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   },
   { 
     id: 3, 
     title: "Cybersecurity Services", 
-    subtitle: "Safeguarding your digital assets and data", 
     description: "Conduct comprehensive risk assessments and implement robust security measures to safeguard client data and systems. This includes deploying firewalls, encryption protocols, and incident response plans to ensure resilience against cyber threats. Deliverables: Risk assessment, security protocols, and monitoring setup.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
   },
   { 
     id: 4, 
     title: "Cloud Computing Solutions", 
-    subtitle: "Scalable, secure, and cost-efficient cloud adoption", 
     description: "Enable efficient cloud migration and manage infrastructure across major platforms like AWS, Azure, and Google Cloud to optimize cost, scalability, and system performance. Deliverables: Migration plan, cloud setup, and optimization reports.", 
     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   },
   { 
     id: 5, 
     title: "Managed IT Services", 
-    subtitle: "Proactive IT monitoring and maintenance", 
     description: "Provide proactive network monitoring, end-to-end system maintenance, and around-the-clock helpdesk support to ensure continuous and reliable business operations. Deliverables: Monitoring dashboards, maintenance logs, and support tickets.", 
     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   },
   { 
     id: 6, 
     title: "Software Development & Customization", 
-    subtitle: "Tailored apps to meet unique business needs", 
     description: "Design and develop customized applications tailored to meet each client’s unique business challenges, goals, and operational requirements. Deliverables: Custom software, user manuals, and deployment support.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
   },
   { 
     id: 7, 
     title: "IT Support & Troubleshooting", 
-    subtitle: "Reliable help when technical issues arise", 
     description: "Deliver fast and reliable technical support for hardware, software, and network issues to reduce downtime and keep business operations running smoothly. Deliverables: Support tickets, resolution reports, and uptime metrics.", 
-     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
+    bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   },
   { 
     id: 8, 
     title: "Data Management & Analytics", 
-    subtitle: "Turning raw data into valuable insights", 
     description: "Implement secure data storage, reliable backup systems, and advanced analytics tools to protect valuable information and extract actionable business insights. Deliverables: Data architecture, backup systems, and analytics dashboards.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]"  
   },
   { 
     id: 9, 
     title: "IT Training & Change Management", 
-    subtitle: "Empowering teams to adapt and thrive", 
     description: "Offer comprehensive staff training and hands-on guidance during technology transitions to ensure smooth system adoption and organizational readiness. Deliverables: Training sessions, user guides, and change management plans.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
   },
   { 
     id: 10, 
     title: "Consulting on Emerging Technologies", 
-    subtitle: "Guidance on AI, IoT, and next-gen tools", 
     description: "Provide expert guidance on harnessing emerging technologies like AI, IoT, and blockchain to drive innovation and sustain a competitive advantage. Deliverables: Trend reports, feasibility studies, and implementation strategies.", 
     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   },
   { 
     id: 11, 
     title: "Machine Learning & AI Integration", 
-    subtitle: "Smarter automation with AI-driven solutions", 
     description: "Develop and implement tailored AI solutions and machine learning models to automate tasks, improve decisions, and generate insights. Examples include chatbots, behavior analysis, and workflow optimization. Deliverables: Custom ML/AI models, integration plans, and performance reports.", 
     bgColor: "bg-[#363B4D]", textColor: "text-white", btnColor: "bg-[#DDE5E5] text-[#363B4D]" 
   },
   { 
     id: 12, 
     title: "Business Consulting", 
-    subtitle: "Optimizing processes for efficiency and growth", 
-    description: "Apply Lean Six Sigma principles to streamline workflows, reduce waste, and enhance productivity by standardizing and documenting core business processes. Align operations and IT initiatives with strategic goals and market trends to support long-term scalability. Identify cost-saving opportunities and revenue leakage to optimize resource allocation and cost structures. Modernize technology and automate manual tasks to improve data-driven decision-making. Benchmark against industry best practices to uncover unique value propositions. Improve service delivery, responsiveness, and quality while reducing customer pain points. Guide organizational change during restructuring, mergers, or cultural shifts to foster agility and innovation.Streamline workflows with Lean Six Sigma...", 
+    description: "We optimize workflows and align operations with business goals using Lean Six Sigma—driving efficiency, cost savings, automation, and innovation while improving service quality, scalability, and data-driven decision-making across the organization.", 
     bgColor: "bg-[#DDE5E5]", textColor: "text-[#363B4D]", btnColor: "bg-[#363B4D] text-white" 
   }
 ];
@@ -851,7 +926,6 @@ services.forEach(service => {
   card.innerHTML = `
     <div>
       <h1 class="text-2xl font-bold">${service.title}</h1>
-      <p class="text-sm pt-2 opacity-80">${service.subtitle}</p>
     </div>
     <button onclick="openService(${service.id})"
   class="absolute -bottom-4 md:-right-4 right-58 w-16 hover:w-32 h-12 sm:h-16 rounded-lg flex items-center justify-center font-bold text-lg ${service.btnColor} 
